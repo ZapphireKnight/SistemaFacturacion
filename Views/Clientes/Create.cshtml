@@ -1,0 +1,123 @@
+﻿@model Modulo_Facturacion.Models.Cliente
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Clientes</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Clientes" asp-action="Index">
+                        Clientes
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Crear Nuevo Cliente</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Crear Cliente:</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <form asp-action="Create">
+                                <div asp-validation-summary="ModelOnly"
+                                     class="text-danger"></div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="Nombre"></label>
+                                        <input type="text"
+                                               class="form-control form-control-lg"
+                                               asp-for="Nombre"
+                                               placeholder="Nombre Comercial o Razón Social"
+                                               required />
+                                        <span asp-validation-for="Nombre"
+                                              class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="Identificacion"></label>
+                                        <input type="text"
+                                               class="form-control form-control-lg"
+                                               asp-for="Identificacion"
+                                               placeholder="Número de Identificacion (Cédula o RNC)"
+                                               required />
+                                        <span asp-validation-for="Identificacion"
+                                              class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="CuentaContable">Cuenta Contable:</label>
+                                        <select class="form-select form-control-lg"
+                                                asp-for="CuentaContable"
+                                                required>
+                                            <option value="" disabled selected>
+                                                -- Selecciona una opción --
+                                            </option>
+                                            <option value="13">13 (Ingreso x Ventas)</option>
+                                            <option value="6">6 (Inventario)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="Estado">Estado</label>
+                                        <select class="form-select form-control-lg"
+                                                asp-for="Estado"
+                                                required>
+                                            <option value="" disabled selected>
+                                                -- Selecciona una opción --
+                                            </option>
+                                            <option value="activo  ">Activo</option>
+                                            <option value="inactivo">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12 text-center mt-4">
+                                    <input type="submit"
+                                           value="Create"
+                                           class="btn btn-primary btn-lg" />
+                                    <a asp-action="Index" class="btn btn-warning btn-lg">
+                                        Volver Atrás
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await
+    Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,113 @@
+﻿@model Modulo_Facturacion.Models.Empleado
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Empleados</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Empleados" asp-action="Index">
+                        Empleados
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Editar Empleado</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Editar Empleado:</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <form asp-action="Edit">
+                                <div asp-validation-summary="ModelOnly"
+                                     class="text-danger"></div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="Nombre"></label>
+                                        <input type="text"
+                                               class="form-control form-control-lg"
+                                               asp-for="Nombre"
+                                               placeholder="Nombre del Empleado"
+                                               required />
+                                        <span asp-validation-for="Nombre"
+                                              class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="PorcientoComision"></label>
+                                        <div class="input-group mb-3">
+                                            <input type="number"
+                                                   class="form-control form-control-lg"
+                                                   asp-for="PorcientoComision"
+                                                   placeholder="Por ciento de comision"
+                                                   aria-label="Por ciento de comision"
+                                                   aria-describedby="basic-addon2"
+                                                   min="0"
+                                                   required />
+                                            <span class="input-group-text" id="basic-addon2">%</span>
+                                        </div>
+                                        <span asp-validation-for="PorcientoComision"
+                                              class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="Estado">Estado</label>
+                                        <select class="form-select form-control-lg"
+                                                asp-for="Estado"
+                                                required>
+                                            <option value="" disabled selected>
+                                                -- Selecciona una opción --
+                                            </option>
+                                            <option value="activo  ">Activo</option>
+                                            <option value="inactivo">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12 text-center mt-4">
+                                    <input type="submit"
+                                           value="Save"
+                                           class="btn btn-primary btn-lg" />
+                                    <a asp-action="Index" class="btn btn-warning btn-lg">
+                                        Volver Atrás
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

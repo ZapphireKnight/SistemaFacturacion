@@ -1,0 +1,232 @@
+﻿@model Modulo_Facturacion.Models.Factura
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Facturas</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Facturas" asp-action="Index">
+                        Facturas
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Editar Factura</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Editar Factura:</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <form asp-action="Edit" class="row">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="IdVendedor">Nombre del Vendedor:</label>
+                                        <select class="form-select form-control-lg" asp-for="IdVendedor" asp-items="ViewBag.IdVendedor" required>
+                                            <option value="" disabled selected>
+                                                -- Selecciona una opción --
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="IdCliente">Nombre del Cliente:</label>
+                                        <select class="form-select form-control-lg" asp-for="IdCliente" asp-items="ViewBag.IdCliente" required>
+                                            <option value="" disabled selected>
+                                                -- Selecciona una opción --
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="IdArticulo">Articulo:</label>
+                                        <select class="form-select form-control-lg" asp-for="IdArticulo" asp-items="ViewBag.IdArticulo" required>
+                                            <option value="" disabled selected>
+                                                -- Selecciona una opción --
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="PrecioUnitario"></label>
+                                        <input type="number"
+                                               class="form-control form-control-lg"
+                                               asp-for="PrecioUnitario"
+                                               placeholder="Precio Unitario del Articulo"
+                                               aria-label="Precio Unitario del Articulo"
+                                               aria-describedby="basic-addon2"
+                                               required 
+                                               readonly/>
+                                        <span asp-validation-for="PrecioUnitario" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="Cantidad"></label>
+                                        <input type="number"
+                                               class="form-control form-control-lg"
+                                               asp-for="Cantidad"
+                                               placeholder="Ingrese una cantidad"
+                                               aria-label="Ingrese una cantidad"
+                                               aria-describedby="basic-addon2"
+                                               min="1"
+                                               required/>
+                                        <span asp-validation-for="Cantidad" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="Fecha"></label>
+                                        <input class="form-control form-control-lg"
+                                               asp-for="Fecha"
+                                               required/>
+                                        <span asp-validation-for="Fecha" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label asp-for="Comentario">Comentarios</label>
+                                        <textarea
+                                            class="form-control"
+                                            asp-for="Comentario"
+                                            rows="5"
+                                        ></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12 text-center mt-4">
+                                    <input type="submit"
+                                           value="Guardar Factura"
+                                           class="btn btn-primary btn-lg" />
+                                    <a asp-action="Index" class="btn btn-warning btn-lg">
+                                        Volver Atrás
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await
+    Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Obtener el array de precios unitarios desde ViewData
+        var preciosUnitarios = @Html.Raw(Json.Serialize(ViewData["PreciosUnitarios"]));
+
+        // Manejar el cambio de selección del artículo
+        document.querySelector('select[name="IdArticulo"]').addEventListener('change', function(event) {
+            var selectedIndex = event.target.selectedIndex;
+            var precioUnitario = preciosUnitarios[selectedIndex - 1]; // -1 porque el índice 0 es la opción por defecto en select
+            
+            // Asignar el precio unitario al input
+            document.getElementById('PrecioUnitario').value = precioUnitario ? precioUnitario : '';
+        });
+    </script>
+}
+
+<!--<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>Factura</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="IdVendedor" class="control-label"></label>
+                <select asp-for="IdVendedor" class="form-control" asp-items="ViewBag.IdVendedor"></select>
+                <span asp-validation-for="IdVendedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCliente" class="control-label"></label>
+                <select asp-for="IdCliente" class="form-control" asp-items="ViewBag.IdCliente"></select>
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comentario" class="control-label"></label>
+                <input asp-for="Comentario" class="form-control" />
+                <span asp-validation-for="Comentario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdArticulo" class="control-label"></label>
+                <select asp-for="IdArticulo" class="form-control" asp-items="ViewBag.IdArticulo"></select>
+                <span asp-validation-for="IdArticulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cantidad" class="control-label"></label>
+                <input asp-for="Cantidad" class="form-control" />
+                <span asp-validation-for="Cantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioUnitario" class="control-label"></label>
+                <input asp-for="PrecioUnitario" class="form-control" />
+                <span asp-validation-for="PrecioUnitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>-->

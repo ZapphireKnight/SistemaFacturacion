@@ -1,0 +1,274 @@
+﻿@{
+    ViewData["Title"] = "Report";
+    var topArticulos = ViewBag.TopArticulos as IEnumerable<Modulo_Facturacion.Models.ArticuloViewModel>;
+    var topClientes = ViewBag.TopClientes as IEnumerable<Modulo_Facturacion.Models.ClienteViewModel>;
+    var topEmpleados = ViewBag.TopEmpleados as IEnumerable<Modulo_Facturacion.Models.EmpleadoViewModel>;
+    var facturasOrdenadas = ViewBag.FacturasOrdenadas as IEnumerable<Modulo_Facturacion.Models.Factura>;
+}
+
+@if (topArticulos != null)
+{
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-header">
+                <h3 class="fw-bold mb-3">
+                    Reportes
+                </h3>
+                <ul class="breadcrumbs mb-3">
+                    <li class="nav-home">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <div class="col-md-12 text-center">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Articulos Más Comprados
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover table-head-bg-primary table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                Artículo
+                                            </th>
+                                            <th scope="col">
+                                                # De Veces Comprado
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var articulo in topArticulos)
+                                        {
+                                            <tr>
+                                                <td>@articulo.Descripcion</td>
+                                                <td>@articulo.Count</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (topClientes != null)
+{
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-header">
+                <h3 class="fw-bold mb-3">
+                    Reportes
+                </h3>
+                <ul class="breadcrumbs mb-3">
+                    <li class="nav-home">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <div class="col-md-12 text-center">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Clientes Con Más Compras Realizadas
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover table-head-bg-primary table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                Cliente
+                                            </th>
+                                            <th scope="col">
+                                                # Compras Realizadas
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var cliente in topClientes)
+                                        {
+                                            <tr>
+                                                <td>@cliente.Cliente</td>
+                                                <td>@cliente.Count</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (topEmpleados != null)
+{
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-header">
+                <h3 class="fw-bold mb-3">
+                    Reportes
+                </h3>
+                <ul class="breadcrumbs mb-3">
+                    <li class="nav-home">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <div class="col-md-12 text-center">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Vendedores Con Más Ventas
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover table-head-bg-primary table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                Vendedor
+                                            </th>
+                                            <th scope="col">
+                                                # Ventas
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var empleado in topEmpleados)
+                                        {
+                                            <tr>
+                                                <td>@empleado.Empleado</td>
+                                                <td>@empleado.Count</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}    
+
+@if (facturasOrdenadas != null)
+{
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-header">
+                <h3 class="fw-bold mb-3">
+                    Reportes
+                </h3>
+                <ul class="breadcrumbs mb-3">
+                    <li class="nav-home">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <div class="col-md-12 text-center">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Facturas Ordenadas Por Fecha
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover table-head-bg-primary table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                Vendedor
+                                            </th>
+                                            <th scope="col">
+                                                Cliente
+                                            </th>
+                                            <th scope="col">
+                                                Articulo
+                                            </th>
+                                            <th scope="col">
+                                                Precio Unitario
+                                            </th>
+                                            <th scope="col">
+                                                Cantidad
+                                            </th>
+                                            <th scope="col">
+                                                Total
+                                            </th>
+                                            <th scope="col">
+                                                Fecha
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var factura in facturasOrdenadas)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @factura.IdVendedorNavigation.Nombre
+                                                </td>
+                                                <td>
+                                                    @factura.IdClienteNavigation.Nombre
+                                                </td>
+                                                <td>
+                                                    @factura.IdArticuloNavigation.Descripcion
+                                                </td>
+                                                <td>
+                                                    @factura.PrecioUnitario
+                                                </td>
+                                                <td>
+                                                    @factura.Cantidad
+                                                </td>
+                                                <td>
+                                                    @(factura.PrecioUnitario * factura.Cantidad)
+                                                </td>
+                                                <td>
+                                                    @factura.Fecha.ToString("dd/MM/yyyy")
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

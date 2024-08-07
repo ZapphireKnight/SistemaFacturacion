@@ -1,0 +1,165 @@
+﻿@model IEnumerable<Modulo_Facturacion.Models.Asiento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">
+                Asientos
+            </h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Asientos" asp-action="Index">
+                        Asientos
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Elige las fechas de los Asientos a crear
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="get" asp-action="Index" id="filterForm">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <label class="fw-bold h2" for="fechaInicio">Fecha Inicial:</label>
+                                    <input type="date" id="fechaInicio" name="fechaInicio" class="form-control form-control-lg" value="@ViewData["FechaInicio"]">
+                                </div>
+                                
+                                <div class="col-md-6 col-lg-6">
+                                    <label class="fw-bold h2" for="fechaFin">Fecha Final:</label>
+                                    <input type="date" id="fechaFin" name="fechaFin" class="form-control form-control-lg" value="@ViewData["FechaFin"]">
+                                </div>
+
+                                <div class="col-md-12 col-lg-12 text-center">
+                                    <button type="submit" class="btn btn-lg btn-primary mt-4">Filtrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            @if (Model != null && Model.Any()){
+                <div class="col-md-12 text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                Lista de Asientos
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover table-head-bg-primary table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            Identificador de Asiento
+                                        </th>
+                                        <th scope="col">
+                                            Fecha del Asiento
+                                        </th>
+                                        <th scope="col">
+                                            Identificador de Cuenta
+                                        </th>
+                                        <th scope="col">
+                                            Tipo de Movimiento
+                                        </th>
+                                        <th scope="col">
+                                            Monto del Asiento
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdentificadorAsiento)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaAsiento)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdentificadorCuenta)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.TipoMovimiento)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.MontoAsiento)
+                                            </td>
+                                            <!--<td>
+                                                <a asp-action="Edit"
+                                                   asp-route-id="@item.Id"
+                                                   class="btn btn-warning">
+                                                    <span class="btn-label">
+                                                        <i class="fa fa-edit"></i>
+                                                    </span>
+                                                    Editar
+                                                </a>
+                                                |
+                                                <a asp-action="Delete"
+                                                   asp-route-id="@item.Id"
+                                                   class="btn btn-danger">
+                                                    <span class="btn-label">
+                                                        <i class="fa fa-exclamation-circle"></i>
+                                                    </span>
+                                                    Eliminar
+                                                </a>
+                                            </td>-->
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                            <button class="btn btn-lg btn-primary" id="enviarAsiento">Enviar Asientos Contables</button>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("filterForm").addEventListener("submit", function(event) {
+            var fechaInicio = document.getElementById("fechaInicio").value;
+            var fechaFin = document.getElementById("fechaFin").value;
+
+            if (fechaInicio && fechaFin && new Date(fechaInicio) > new Date(fechaFin)) {
+                alert("La fecha final debe ser mayor o igual a la fecha inicial.");
+                event.preventDefault(); // Previene el envío del formulario
+            }
+        });
+
+        document.getElementById("enviarAsiento").addEventListener("click", function() {
+            var fechaInicio = document.getElementById("fechaInicio").value;
+            var fechaFin = document.getElementById("fechaFin").value;
+
+            if (fechaInicio && fechaFin && new Date(fechaInicio) <= new Date(fechaFin)) {
+                var url = '@Url.Action("Create", "Asientos")' + '?fechaInicio=' + fechaInicio + '&fechaFin=' + fechaFin;
+                window.location.href = url;
+            } else {
+                alert("La fecha final debe ser mayor o igual a la fecha inicial.");
+            }
+        });
+    </script>
+}

@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|c:\\users\\frank\\documents\\franklyn\\apec\\9no cuatrimestre\\integracion de aplicaciones propietaria\\proyecto final\\modulo_facturacion\\controllers\\asientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|solutionrelative:controllers\\asientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|c:\\users\\frank\\documents\\franklyn\\apec\\9no cuatrimestre\\integracion de aplicaciones propietaria\\proyecto final\\modulo_facturacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|c:\\users\\frank\\documents\\franklyn\\apec\\9no cuatrimestre\\integracion de aplicaciones propietaria\\proyecto final\\modulo_facturacion\\views\\asientos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|solutionrelative:views\\asientos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|c:\\users\\frank\\documents\\franklyn\\apec\\9no cuatrimestre\\integracion de aplicaciones propietaria\\proyecto final\\modulo_facturacion\\views\\asientos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A3D1FD1B-7B0A-4131-BA69-EF9CA5E793A3}|Modulo_Facturacion.csproj|solutionrelative:views\\asientos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T20:41:15.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Views\\Asientos\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Asientos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Views\\Asientos\\Create.cshtml",
+              "RelativeToolTip": "Views\\Asientos\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T19:47:05.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Views\\Asientos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Asientos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Views\\Asientos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Asientos\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T18:59:27.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AsientosController.cs",
+              "DocumentMoniker": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Controllers\\AsientosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AsientosController.cs",
+              "ToolTip": "C:\\Users\\frank\\Documents\\Franklyn\\Apec\\9no Cuatrimestre\\Integracion de aplicaciones propietaria\\Proyecto FInal\\Modulo_Facturacion\\Controllers\\AsientosController.cs",
+              "RelativeToolTip": "Controllers\\AsientosController.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAIwEYAAACzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T18:23:02.962Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

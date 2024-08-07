@@ -1,0 +1,187 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Modulo_Facturacion
+build_property.RootNamespace = Modulo_Facturacion
+build_property.ProjectDir = C:\Users\frank\Documents\Franklyn\Apec\9no Cuatrimestre\Integracion de aplicaciones propietaria\Proyecto FInal\Modulo_Facturacion\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\frank\Documents\Franklyn\Apec\9no Cuatrimestre\Integracion de aplicaciones propietaria\Proyecto FInal\Modulo_Facturacion
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Accounts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Accounts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Accounts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Accounts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Accounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Accounts/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Articulos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Articulos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Articulos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Articulos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Articulos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Asientos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZW50b3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Asientos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZW50b3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Asientos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZW50b3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Asientos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZW50b3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Asientos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZW50b3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Empleados/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Empleados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Empleados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Empleados/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Empleados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Facturas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Facturas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Facturas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Facturas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Facturas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Reportes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Reportes/Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frank/Documents/Franklyn/Apec/9no Cuatrimestre/Integracion de aplicaciones propietaria/Proyecto FInal/Modulo_Facturacion/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5n8dkb392o

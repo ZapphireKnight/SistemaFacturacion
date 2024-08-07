@@ -1,0 +1,215 @@
+﻿@model IEnumerable<Modulo_Facturacion.Models.Factura>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">
+                Facturas
+            </h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Facturas" asp-action="Index">
+                        Facturas
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Generar una Factura Nueva
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a asp-action="Create" class="btn btn-primary btn-lg">
+                            Crear Factura
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                Lista de Facturas
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover table-head-bg-primary table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            Vendedor
+                                        </th>
+                                        <th scope="col">
+                                            Cliente
+                                        </th>
+                                        <th scope="col">
+                                            Articulo
+                                        </th>
+                                        <th scope="col">
+                                            Precio Unitario
+                                        </th>
+                                        <th scope="col">
+                                            @Html.DisplayNameFor(model => model.Cantidad)
+                                        </th>
+                                        <th scope="col">
+                                            Total
+                                        </th>
+                                        <th scope="col">
+                                            @Html.DisplayNameFor(model => model.Fecha)
+                                        </th>
+                                        <!--<th scope="col">
+                                            @Html.DisplayNameFor(model => model.Comentario)
+                                        </th>-->
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdVendedorNavigation.Nombre)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdClienteNavigation.Nombre)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdArticuloNavigation.Descripcion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.PrecioUnitario)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Cantidad)
+                                            </td>
+                                            <td>
+                                                @(item.PrecioUnitario * item.Cantidad)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Fecha)
+                                            </td>
+                                            
+                                            <td>
+                                                <!--<a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                                                    <span class="btn-label">
+                                                        <i class="fa fa-edit"></i>
+                                                    </span>
+                                                    Editar
+                                                </a>
+                                                |
+                                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                                                    <span class="btn-label">
+                                                        <i class="fa fa-exclamation-circle"></i>
+                                                    </span>
+                                                    Eliminar
+                                                </a>-->
+                                                |
+                                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">
+                                                    <span class="btn-label">
+                                                        <i class="fas fa-file"></i>
+                                                    </span>
+                                                    Imprimir
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comentario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioUnitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdArticuloNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdVendedorNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdArticuloNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdClienteNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdVendedorNavigation.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>-->

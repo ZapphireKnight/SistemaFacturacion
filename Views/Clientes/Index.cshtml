@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Modulo_Facturacion.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">
+                Clientes
+            </h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Clientes" asp-action="Index">
+                        Clientes
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Añadir un nuevo Cliente
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a asp-action="Create" class="btn btn-primary btn-lg">
+                            Crear Cliente
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                Lista de Clientes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover table-head-bg-primary table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            @Html.DisplayNameFor(model => model.Nombre)
+                                        </th>
+                                        <th scope="col">
+                                            @Html.DisplayNameFor(model => model.Identificacion)
+                                        </th>
+                                        <th scope="col">
+                                            @Html.DisplayNameFor(model => model.CuentaContable)
+                                        </th>
+                                        <th scope="col">
+                                            @Html.DisplayNameFor(model => model.Estado)
+                                        </th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Identificacion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.CuentaContable)
+                                            </td>
+                                            <td>@Html.DisplayFor(modelItem => item.Estado)</td>
+                                            <td>
+                                                <a asp-action="Edit"
+                                                   asp-route-id="@item.Id"
+                                                   class="btn btn-warning">
+                                                    <span class="btn-label">
+                                                        <i class="fa fa-edit"></i>
+                                                    </span>
+                                                    Editar
+                                                </a>
+                                                |
+                                                <a asp-action="Delete"
+                                                   asp-route-id="@item.Id"
+                                                   class="btn btn-danger">
+                                                    <span class="btn-label">
+                                                        <i class="fa fa-exclamation-circle"></i>
+                                                    </span>
+                                                    Eliminar
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

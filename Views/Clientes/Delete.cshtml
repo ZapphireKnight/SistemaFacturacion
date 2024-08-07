@@ -1,0 +1,99 @@
+﻿@model Modulo_Facturacion.Models.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Clientes</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Clientes" asp-action="Index">
+                        Clientes
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Eliminar Clientes</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Eliminar Cliente: <br /> Si elimina este cliente no podrá recuperarlo. </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text"
+                                           class="form-control form-control-lg"
+                                           value="@Html.DisplayFor(model => model.Nombre)"
+                                           disabled />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Identificacion</label>
+                                    <input type="text"
+                                           class="form-control form-control-lg"
+                                           value="@Html.DisplayFor(model => model.Identificacion)"
+                                           disabled />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Cuenta Contable:</label>
+                                    <input type="text"
+                                           class="form-control form-control-lg"
+                                           value="@Html.DisplayFor(model => model.CuentaContable)"
+                                           disabled />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    <input type="text"
+                                           class="form-control form-control-lg"
+                                           value="@Html.DisplayFor(model => model.Estado)"
+                                           disabled />
+                                </div>
+                            </div>
+
+                            <form asp-action="Delete">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="col-md-12 col-lg-12 text-center mt-4">
+                                    <input type="submit"
+                                           value="Delete"
+                                           class="btn btn-danger btn-lg" />
+                                    <a asp-action="Index" class="btn btn-warning btn-lg">
+                                        Volver Atrás
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

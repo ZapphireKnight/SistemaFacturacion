@@ -1,0 +1,68 @@
+﻿@model Modulo_Facturacion.Models.Asiento
+
+@{
+    ViewData["Title"] = "Create Asiento Contable";
+}
+
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Asientos</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Asientos" asp-action="Index">
+                        Asientos
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Asiento Contable Creado</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Asiento Contable</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            @if (ViewBag.Message != null)
+                            {
+                                <div class="alert @(ViewBag.Message.Contains("Error") ? "alert-danger" : "alert-success")">
+                                    <div class="row">
+                                        <div class="col-md-8 text-center">
+                                            @ViewBag.Message
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
